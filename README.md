@@ -2,13 +2,14 @@
 
 **What is this project?**
 
-This project develops a highly accurate machine learning model to detect fraudulent transactions in a public credit card dataset.
+This project about developing a highly accurate machine learning model to detect fraudulent transactions in a public credit card dataset.
+Particular attention should be given to minimize false positive.
 
 **Problem Solved**
 
 Credit card fraud detection is challenging due to extreme data imbalance (very few fraud cases). Our solution minimizes false alarms, ensuring operational efficiency for financial institutions.
 
-Key Features
+**Key Features**
 Feature Engineering Pipeline: Transforms raw Time and skewed Amount features into relevant inputs for the model.
 
 Imbalance Handling: Uses the SMOTE (Oversampling) technique to balance the training data, allowing the model to effectively learn the rare fraud patterns.
@@ -21,6 +22,7 @@ Deployable Model: The trained Random Forest Classifier is saved as rf_fraud_mode
 The entire analysis, modeling, and evaluation are conducted within the provided Jupyter Notebook (hackaton.ipynb).
 
 **Prerequisites**
+
 You need Python installed. All required packages can be installed via pip:
 
 pip install pandas numpy scikit-learn imbalanced-learn matplotlib joblib
