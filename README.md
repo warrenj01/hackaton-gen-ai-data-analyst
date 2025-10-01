@@ -44,7 +44,7 @@ Credit card fraud is rare but costly. Detecting it is challenging due to class i
 ## Files
 
 - `hackaton.ipynb` — Main notebook with all analysis and modeling steps.
-- `creditcard.csv` — Dataset (not included in repo; download from Kaggle).
+- `creditcard.csv` — Dataset (not included in repo).
 - `rf_fraud_model.pkl` — Saved Random Forest model (created after running the notebook).
 - `lr_fraud_model.pkl` — Saved Logistic Regression model (created after running the notebook).
 
