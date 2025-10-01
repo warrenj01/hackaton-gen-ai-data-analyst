@@ -1,47 +1,57 @@
-****Credit Card Fraud Detection using Random Forest****
+# Credit Card Fraud Detection (Hackathon Project)
 
-**What is this project?**
+## Overview
 
-This project about developing a highly accurate machine learning model to detect fraudulent transactions in a public credit card dataset.
-Particular attention should be given to minimize false positive.
+This project demonstrates a machine learning solution for detecting fraudulent credit card transactions using a public, highly imbalanced dataset. The goal is to help financial institutions reduce false alarms while effectively identifying fraud.
 
-**Problem Solved**
+## Problem Statement
 
-Credit card fraud detection is challenging due to extreme data imbalance (very few fraud cases). Our solution minimizes false alarms, ensuring operational efficiency for financial institutions.
+Credit card fraud is rare but costly. Detecting it is challenging due to class imbalance—fraudulent transactions are much less frequent than genuine ones. This project uses data science techniques to build and evaluate effective fraud detection models.
 
-**Key Features**
-Feature Engineering Pipeline: Transforms raw Time and skewed Amount features into relevant inputs for the model.
+## Main Steps
 
-Imbalance Handling: Uses the SMOTE (Oversampling) technique to balance the training data, allowing the model to effectively learn the rare fraud patterns.
+- **Exploratory Data Analysis (EDA):** Understands data distribution and class imbalance.
+- **Feature Engineering:** Creates new features (like log-transformed Amount or transaction Hour) to help the model learn better patterns.
+- **Imbalance Handling:** Uses SMOTE to oversample the minority (fraud) class during training.
+- **Modeling:** Trains and evaluates both a Random Forest classifier and a Logistic Regression model.
+- **Evaluation:** Reports results using metrics like precision, recall, and ROC-AUC, focusing on minimizing false positives.
 
-High Performance: Achieves 86% Precision and 85% Recall on the fraud class, confirmed by an AUC score of 0.973.
+## Getting Started
 
-Deployable Model: The trained Random Forest Classifier is saved as rf_fraud_model.pkl for immediate use in real-time scoring systems.
+### Prerequisites
 
-**How to Run the Project**
-The entire analysis, modeling, and evaluation are conducted within the provided Jupyter Notebook (hackaton.ipynb).
+- Python 3.8+ recommended.
+- Install requirements:
+  ```bash
+  pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn joblib
+  ```
 
-**Prerequisites**
+### Running the Notebook
 
-You need Python installed. All required packages can be installed via pip:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/warrenj01/hackaton-gen-ai-data-analyst.git
+   cd hackaton-gen-ai-data-analyst
+   ```
+2. **Start Jupyter:**
+   ```bash
+   jupyter notebook
+   ```
+3. **Open and Run the Notebook:** Open `hackaton.ipynb` and run the cells in sequence.
 
-pip install pandas numpy scikit-learn imbalanced-learn matplotlib joblib
+*Alternatively, upload the notebook to Google Colab and run all cells there. Make sure to also upload the dataset.*
 
-Option 1: Run Locally (Recommended)
-Clone the Repository:
+## Files
 
-Start Jupyter:
+- `hackaton.ipynb` — Main notebook with all analysis and modeling steps.
+- `creditcard.csv` — Dataset (not included in repo; download from Kaggle).
+- `rf_fraud_model.pkl` — Saved Random Forest model (created after running the notebook).
+- `lr_fraud_model.pkl` — Saved Logistic Regression model (created after running the notebook).
 
-Open the Notebook: Open the hackaton.ipynb file in your browser.
+## References
 
-Execute Cells: Run all cells sequentially (e.g., using "Run All" or Shift+Enter) to reproduce the entire data analysis, training, and evaluation pipeline.
+- [Original Dataset (Kaggle)](https://www.kaggle.com/mlg-ulb/creditcardfraud)
 
-**Option 2: Run on Google Colab**
-Upload Files: Upload the hackaton.ipynb file to your Google Drive. Ensure the dataset (if separate) and the saved model files (if analyzing the results) are also uploaded.
+---
 
-Open in Colab: Open the notebook in Google Colab.
-
-Install Libraries: Run the first cell(s) to install all required libraries (e.g., !pip install imbalanced-learn).
-
-Execute Cells: Run all cells in order to process the data and train the model.
-
+**Contact:** [warrenj01](https://github.com/warrenj01)
